@@ -41,5 +41,5 @@ def is_updating(pv, timeout=10.0):
 def has_value(pv, val, tolerance=None):
 	if tolerance:
 		return is_within_limits(pv, low_limit=val-tolerance, high_limit=val+tolerance)[1]
-	else
+	else:
 		return epics.caget(pv) == val
